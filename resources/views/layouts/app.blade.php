@@ -88,8 +88,8 @@ use App\Models\Category;
                                 @endforeach
                             </ul>
                         </li>
-
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/wcl') }}">WCL</a></li>
+<!-- 
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/wcl') }}">WCL</a></li> -->
                     </ul>
                 </div>
             </div>
