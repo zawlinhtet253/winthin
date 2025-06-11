@@ -81,7 +81,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->controller(AdminCont
 // -----------------------------
 // Authentication Routes
 // -----------------------------
-Auth::routes();
+Auth::routes(['register' => false]); // Disable registration if not needed
 
 // -----------------------------
 // Home and Profile Routes (after login)
