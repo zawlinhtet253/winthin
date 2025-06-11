@@ -81,7 +81,11 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->controller(AdminCont
 // -----------------------------
 // Authentication Routes
 // -----------------------------
-Auth::routes(['register' => false]); // Disable registration if not needed
+Auth::routes([
+    'register' => false,
+    'reset' => false,   // ✅ correct key is 'reset', not 'password.reset'
+    'verify' => false   // optional
+]);
 
 // -----------------------------
 // Home and Profile Routes (after login)
