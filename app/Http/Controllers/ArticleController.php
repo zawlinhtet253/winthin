@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     public function index() {
-        $articles = Article::latest()->take(3)->get();
+        $articles = Article::latest()->take(6)->get();
         return view('articles.index', [
             'articles' => $articles,
         ]);
@@ -29,6 +29,7 @@ class ArticleController extends Controller
             ->when($categoryId, function ($query, $categoryId) {
                 return $query->where('category_id', $categoryId);
             })
+            ->orderBy('created_at', 'desc')
             ->get();
 
         $categories = Category::all();
