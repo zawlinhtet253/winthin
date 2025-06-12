@@ -1,48 +1,64 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid py-5" style="min-height: 55vh;">
-    <div class="row g-0">
-        <!-- Sidebar -->
-        <nav class="col-12 col-md-3 col-lg-2 bg-light border-end">
-    <h1 class="h4 px-3 text-center text-primary py-4">
-        Admin Panel
-    </h1>
-    <div class="list-group">
-        <a href="{{ url('/admin/') }}" class="list-group-item list-group-item-action border-0 py-3 text-center hover-effect">
-            <i class="fas fa-tachometer-alt me-2"></i>
-            <span class="d-none d-sm-inline">Home</span>
-        </a>
-        <a href="{{ url('/admin/users') }}" class="list-group-item list-group-item-action border-0 py-3 text-center hover-effect">
-            <i class="fas fa-users me-2"></i>
-            <span class="d-none d-sm-inline">Users</span>
-        </a>
-        <a href="{{ url('/admin/blogs') }}" class="list-group-item list-group-item-action border-0 py-3 text-center hover-effect">
-            <i class="fa-solid fa-book me-2"></i>
-            <span class="d-none d-sm-inline">Blogs</span>
-        </a>
-        <a href="{{ url('/admin/careers') }}" class="list-group-item list-group-item-action border-0 py-3 text-center hover-effect">
-            <i class="fa-solid fa-briefcase me-2"></i>
-            <span class="d-none d-sm-inline">Carreer</span>
-        </a>
-        <a href="{{ url('/admin/categories') }}" class="list-group-item list-group-item-action border-0 py-3 text-center hover-effect">
-            <i class="fa-solid fa-book me-2"></i>
-            <span class="d-none d-sm-inline">Categories</span>
-        </a>
-        <form method="POST" action="{{ route('logout') }}" class="text-center">
-            @csrf
-            <button type="submit" class="list-group-item list-group-item-action border-0 py-3 text-danger bg-transparent w-100 text-center">
-                <i class="fas fa-sign-out-alt me-2"></i>
-                <span class="d-none d-sm-inline">Logout</span>
-            </button>
-        </form>
-    </div>
-</nav>
+<div class="container-fluid">
+    <!-- Toggle Button for small/medium screens -->
+    <button class="btn btn-primary d-lg-none my-3" type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#adminSidebar"
+        aria-controls="adminSidebar">
+        <i class="fas fa-bars"></i> Menu
+    </button>
+
+    <div class="row">
+        <!-- Sidebar Offcanvas -->
+        <div class="offcanvas-lg offcanvas-start col-lg-2 bg-light border-end vh-100" tabindex="-1" id="adminSidebar" aria-labelledby="adminSidebarLabel">
+            <div class="offcanvas-header d-lg-none">
+                <h5 class="offcanvas-title text-primary" id="adminSidebarLabel">Admin Panel</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body p-0 d-flex flex-column">
+                <!-- Sidebar Title (Shown on lg+) -->
+                <h5 class="text-center text-primary py-3 border-bottom d-none d-lg-block">Admin Panel</h5>
+
+                <!-- CONTROLS SECTION -->
+                <div class="mb-3">
+                    <small class="text-uppercase text-muted fw-bold px-4 mt-3 d-block">Controls</small>
+                    <div class="list-group list-group-flush">
+                        <a href="{{ url('/admin/') }}" class="list-group-item list-group-item-action px-4 py-3 d-flex align-items-center">
+                            <i class="fas fa-tachometer-alt me-3"></i> Dashboard
+                        </a>
+                        <a href="{{ url('/admin/users') }}" class="list-group-item list-group-item-action px-4 py-3 d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-users me-3"></i> Users</span>
+                        </a>
+                        <a href="{{ url('/admin/blogs') }}" class="list-group-item list-group-item-action px-4 py-3 d-flex align-items-center">
+                            <i class="fa-solid fa-book me-3"></i> Blogs
+                        </a>
+                        <a href="{{ url('/admin/careers') }}" class="list-group-item list-group-item-action px-4 py-3 d-flex align-items-center">
+                            <i class="fa-solid fa-briefcase me-3"></i> Career
+                        </a>
+                        <a href="{{ url('/admin/categories') }}" class="list-group-item list-group-item-action px-4 py-3 d-flex align-items-center">
+                            <i class="fa-solid fa-book me-3"></i> Categories
+                        </a>
+                    </div>
+                </div>
 
 
+                <!-- Logout -->
+                <form method="POST" action="{{ route('logout') }}" class="mt-auto">
+                    @csrf
+                    <button type="submit" class="list-group-item list-group-item-action text-danger bg-transparent border-0 px-4 py-3 d-flex align-items-center">
+                        <i class="fas fa-sign-out-alt me-3"></i> Logout
+                    </button>
+                </form>
+            </div>
+        </div>
         <!-- Main Content -->
-        <main class="col-12 col-md-9 col-lg-10 p-4">
-            @yield('admin.content')
+        <main class="col-lg-10 p-4">
+            <div class="table-responsive">
+                @yield('admin.content')
+            </div>
         </main>
     </div>
 </div>

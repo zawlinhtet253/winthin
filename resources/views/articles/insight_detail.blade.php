@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-4" style="min-height: 50vh;">
+<div class="container py-4" style="min-height: 55vh;">
     <article class="blog-post">
         <h1 class="blog-post-title">{{ $article->title }}</h1>
         
