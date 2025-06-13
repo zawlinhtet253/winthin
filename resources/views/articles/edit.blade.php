@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('admin.layouts')
 
-@section('content')
+@section('admin.content')
     <div class="container py-5">
         <form action="{{ url("/articles/update/$article->id")}}" class="" method="POST">
             @csrf

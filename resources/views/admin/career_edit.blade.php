@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
-@section('content')
+@section('admin.content')
 <div class="container py-5" style="min-height: 55vh;">
     
     @if(session('success'))

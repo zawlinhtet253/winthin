@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
-@section('content')
+@section('admin.content')
 <div class="container py-5" style="min-height: 55vh;">
     <h2 class="mb-4 text-center">Edit User</h2>
 
