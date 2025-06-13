@@ -82,7 +82,7 @@
                 <div class="">
                     <img src="{{ asset('images/female/Daw-Cherry-Paw.jpeg') }}" class="card-img-top mx-auto d-block" alt="" style="width: 300px; height: 300px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title text-center mt-3">Daw Cherry Paw (Associatec Partner)</h5>
+                        <h5 class="card-title text-center mt-3">Daw Cherry Paw ( Associate Partner)</h5>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <div class="">
                     <img src="{{ asset('images/female/DSSH.jpeg') }}" class="card-img-top mx-auto d-block" alt="" style="width: 300px; height: 300px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title text-center mt-3">Daw Soe Soe Htay (Associatec Partner)</h5>
+                        <h5 class="card-title text-center mt-3">Daw Soe Soe Htay ( Associate Partner)</h5>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 <div class="">
                     <img src="{{ asset('images/female/My-Master.jpeg') }}" class="card-img-top mx-auto d-block" alt="" style="width: 300px; height: 300px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title text-center mt-3">Daw Nu War (Associatec Partner)</h5>
+                        <h5 class="card-title text-center mt-3">Daw Nu War ( Associate Partner)</h5>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                 <div class="">
                     <img src="{{ asset('images/female/Dymt.jpg') }}" class="card-img-top mx-auto d-block" alt="" style="width: 300px; height: 300px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title text-center mt-3">Daw Ya Min Than (Associatec Partner)</h5>
+                        <h5 class="card-title text-center mt-3">Daw Ya Min Than ( Associate Partner)</h5>
                     </div>
                 </div>
             </div>
