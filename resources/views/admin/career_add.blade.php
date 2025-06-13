@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts')
 
 @section('admin.content')
 <div class="container py-5" style="min-height: 55vh;">
