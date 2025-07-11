@@ -113,4 +113,7 @@ class ArticleController extends Controller
     public function ourteams() {
         return view('articles.our-teams');
     }
+    public function wcl() {
+        return view('wcl.index');
+    }
 }

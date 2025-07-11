@@ -66,7 +66,9 @@ use App\Models\Category;
                         <li class="nav-item"><a class="nav-link" href="{{ url('/services') }}">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/our-teams') }}">Our Teams</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/contact-us') }}">Contact Us</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/our-activities') }}">Our Activities</a></li>  -->
                         <li class="nav-item"><a class="nav-link" href="{{ url('/career') }}">Career</a></li>
+                        
                         
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="insightsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,8 +90,7 @@ use App\Models\Category;
                                 @endforeach
                             </ul>
                         </li>
-<!-- 
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/wcl') }}">WCL</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/wcl') }}">WCL</a></li>
                     </ul>
                 </div>
             </div>

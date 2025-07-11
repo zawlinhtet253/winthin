@@ -32,6 +32,7 @@ Route::controller(ArticleController::class)->group(function () {
     Route::get('/insights', 'insights')->name('articles.insights');
     Route::get('/insights/{id}', 'insightDetail')->name('articles.insight_detail');
     Route::get('/contact-us', 'contact_us')->name('articles.contact_us');
+    Route::get('/wcl', 'wcl')->name('articles.wcl');
 
     // Authenticated routes for article management
     Route::middleware(['auth'])->group(function () {
